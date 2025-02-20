@@ -208,12 +208,7 @@ class ProductCard extends HTMLElement {
                 <circle cx="16" cy="16" r="15.9155" class="s-product-card-content-pie-svg-bar" />
               </svg>
             </div>`
-            : ``}
-
-          <div class="s-product-card-content-main ${this.isSpecial ? 's-product-card-content-extra-padding' : ''}">
-            <h3 class="s-product-card-content-title">
-              <a href="${this.product?.url}">${this.product?.name}</a>
-            </h3>
+            : ``} 
 
             ${this.product?.subtitle && !this.minimal ?
               `<p class="s-product-card-content-subtitle opacity-80">${this.product?.subtitle}</p>`
@@ -238,8 +233,8 @@ class ProductCard extends HTMLElement {
           </div>`
             : ''}
           <div class="s-product-card-content-sub ${this.isSpecial ? 's-product-card-content-extra-padding' : ''}">
-            ${this.product?.donation?.can_donate ? '' : this.getProductPrice()}
-            ${this.product?.rating?.stars ?
+ 
+          ${this.product?.rating?.stars ?
               `<div class="s-product-card-rating">
                 <i class="sicon-star2 before:text-orange-300"></i>
                 <span>${this.product.rating.stars}</span>
@@ -255,14 +250,13 @@ class ProductCard extends HTMLElement {
 
           ${!this.hideAddBtn ?
             `<div class="s-product-card-content-footer gap-2">
-              <salla-add-product-button fill="outline" width="wide"
+              <salla-add-product-button fill="outline" width="small"
                 product-id="${this.product.id}"
                 product-status="${this.product.status}"
                 product-type="${this.product.type}">
                 ${this.product.status == 'sale' ? 
-                    `<i class="text-base sicon-${ this.product.type == 'booking' ? 'calendar-time' : 'shopping-bag'}"></i>` : ``
-                  }
-                 <span>${this.product.add_to_cart_label ? this.product.add_to_cart_label : this.getAddButtonLabel() }</span>
+                    `<i class="text-white text-xl sicon-${ this.product.type == 'booking' ? 'calendar-time' : 'cart'}"></i>` : ``
+                  } 
                 </salla-add-product-button>
 
               ${this.horizontal || this.fullImage ?
@@ -280,6 +274,12 @@ class ProductCard extends HTMLElement {
                 : ``}
             </div>`
             : ``}
+            <div class="s-product-card-content-main ${this.isSpecial ? 's-product-card-content-extra-padding' : ''}">
+            <h3 class="s-product-card-content-title">
+              <a href="${this.product?.url}">${this.product?.name}</a>
+            </h3>
+           ${this.product?.donation?.can_donate ? '' : this.getProductPrice()}
+   
         </div>
       `
 
