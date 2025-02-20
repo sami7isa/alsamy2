@@ -1,10 +1,18 @@
 {
     "name": {
+<<<<<<< HEAD
         "ar": "السامي",
         "en": "Theme muvzvf5o"
     },
     "repository": "https://github.com/sami7isa/alsamy2",
     "author_email": "sami7istore@gmail.com",
+=======
+        "ar": "رائد",
+        "en": "Theme Raed"
+    },
+    "repository": "https://github.com/SallaApp/theme-raed",
+    "author_email": "support@salla.sa",
+>>>>>>> a2fca55 (New Changes)
     "features": [
         "mega-menu",
         "fonts",
@@ -879,9 +887,16 @@
             ]
         }
     ],
+<<<<<<< HEAD
     "support_url": "",
     "description": {
         "ar": null,
         "en": null
+=======
+    "support_url": "https://salla.com/",
+    "description": {
+        "ar": "مجموعة كبيرة من المزايا لدعم تجارتك وتقديم تجربة تسوق مثيرة لعملائك",
+        "en": "A wide range of features to support your business and provide an exciting shopping experience for your customers"
+>>>>>>> a2fca55 (New Changes)
     }
 }

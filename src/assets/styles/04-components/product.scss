@@ -404,3 +404,17 @@ salla-quantity-input[max='1']{
     @apply cursor-not-allowed
   }
 }
+.s-product-card-content-main {
+  text-align: center;
+  margin-bottom: 60px;
+}
+salla-add-product-button {
+  transform: translate(-100px , -75px);
+  background-color: black;
+  border-radius: 8px;
+  outline: 8px solid white;
+}
+ 
+.s-slider-block__title .s-slider-block__title-right  h2 {
+  justify-content: center;
+}

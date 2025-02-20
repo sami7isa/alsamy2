@@ -193,4 +193,33 @@ salla-user-menu{
   .s-search-results{
     @apply z-10;
   }
+} 
+.btn--rounded-gray {
+  display: none !important;
 }
+ 
+.store-header {
+  margin-top: 0 !important;  
+  padding-top: 0 !important;
+}
+#searchModal {
+  z-index: 1000 !important;
+}
+.header-btn, 
+.header-btn__icon, 
+.salla-cart-summary i, 
+.sicon-user-circle, 
+.sicon-search {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+@media (max-width: 667px) {
+  .logo {
+    transform: translateX(40px);
+  }  
+}
+.s-cart-summary-total {
+  display: none !important;
+} 
