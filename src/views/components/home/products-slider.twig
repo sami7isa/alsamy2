@@ -1,18 +1,9 @@
-{#
-| Variable        | Type      | Description                                                      |
-|-----------------|-----------|------------------------------------------------------------------|
-| products        | Product[] | List of products                                                 |
-| title           | string    | Section title                                                    |
-| display_all_url | ?string   | If it's existed, mean should show load more link to this url     |
-| position        | Int       | Sorting number start from zero                                   |
-#}
-
 <section id="best-offers-{{ position }}-slider" class="s-block s-block--best-offers container overflow-hidden">
   {% if products|length %}
     <salla-products-slider
             source="selected"
             limit="{{ limit }}"
-            autoplay
+            autoplay="false"  <!-- تعطيل التشغيل التلقائي الافتراضي -->
             source-value="[{{ products|map((product) => product.id)|join(',') }}]"
             display-all-url="{{display_all_url}}"
             block-title="{{ title }}"
@@ -21,3 +12,48 @@
     ></salla-products-slider>
   {% endif %}
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        let sliderElement = document.querySelector("salla-products-slider");
+
+        if (sliderElement) {
+            let checkSwiper = setInterval(() => {
+                if (sliderElement.swiper) {
+                    clearInterval(checkSwiper);
+                    let swiperInstance = sliderElement.swiper;
+                    
+                    swiperInstance.autoplay.stop(); // إيقاف التشغيل التلقائي الافتراضي
+
+                    startCustomAnimation(swiperInstance);
+                }
+            }, 500);
+        } else {
+            console.warn("لم يتم العثور على عنصر السلايدر.");
+        }
+    }, 500);
+  });
+
+  function startCustomAnimation(swiper) {
+      console.log("تم تحميل السلايدر! 🚀");
+
+      function moveSlider() {
+          swiper.slideNext(800); // تحرك سريع لمدة 0.8 ثانية
+          setTimeout(() => {
+              swiper.slideNext(600); // حركة أبطأ لمدة 0.6 ثانية
+              setTimeout(() => {
+                  swiper.autoplay.stop(); // توقف مؤقت للحركة
+                  console.log("⏸️ توقف لمدة ثانية...");
+                  setTimeout(() => {
+                      swiper.autoplay.start(); // استئناف الحركة
+                      console.log("▶️ استئناف الحركة...");
+                      moveSlider(); // إعادة تشغيل الحركة المخصصة
+                  }, 1000); // توقف لمدة ثانية
+              }, 1200); // التحرك لمدة 1.2 ثانية ثم التوقف
+          }, 1600); // بعد الحركة الأولى ننتقل للثانية
+      }
+
+      moveSlider(); // تشغيل الحركة لأول مرة
+  }
+</script>

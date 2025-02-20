@@ -409,9 +409,21 @@ salla-quantity-input[max='1']{
   transform: translateY(-60px);
 }
 salla-add-product-button {
-  transform: translate(-100px , -75px);
+  transform: translateY(-75px);
   background-color: black;
   border-radius: 8px !important;
   outline: 8px solid white !important;
+  justify-self: center;
+  display: block;
+  margin: 0 auto;
+}
+.s-product-card-image {
+  border-radius: 20px !important;
+}  
+.s-product-card-wishlist-btn {
+  display: none;
+}
+.add-cart {
+  color: white;
 }
  

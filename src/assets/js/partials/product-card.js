@@ -257,8 +257,8 @@ class ProductCard extends HTMLElement {
                 ${this.product.status == 'sale' ? 
                     `<i class="text-white text-xl sicon-${ this.product.type == 'booking' ? 'calendar-time' : 'cart'}"></i>` : ``
                   } 
+                 <span class="add-cart">اضافة للسلة</span>
                 </salla-add-product-button>
-
               ${this.horizontal || this.fullImage ?
                 `<salla-button 
                   shape="icon" 
