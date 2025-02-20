@@ -18,6 +18,29 @@
             block-title="{{ title }}"
             block-subTitle="{{ sub_title|raw }}"
             slider-id="slider-with-bg-{{ position }}"
+            data-autoplay-speed="500"
     ></salla-products-slider>
   {% endif %}
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector("salla-products-slider");
+    
+    if (slider) {
+        let speeds = [500, 2000]; // سرعة عالية ثم سرعة بطيئة
+        let index = 0;
+
+        function changeSpeed() {
+            slider.removeAttribute("autoplay"); // إيقاف السلايدر للحظة
+            setTimeout(() => {
+                slider.setAttribute("data-autoplay-speed", speeds[index]); // تحديث السرعة
+                slider.setAttribute("autoplay", "true"); // إعادة التشغيل
+                index = (index + 1) % speeds.length; // التبديل بين السرعات
+            }, 500); // توقف قصير لمحاكاة التأثير
+        }
+
+        setInterval(changeSpeed, 2500); // تغيير السرعة كل 2.5 ثانية
+    }
+});
+</script>
