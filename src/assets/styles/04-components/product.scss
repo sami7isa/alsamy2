@@ -409,9 +409,9 @@ salla-quantity-input[max='1']{
   transform: translateY(-60px);
 }
 salla-add-product-button {
-  transform: translateY(-75px);
-  background-color: black;
+  transform: translateY(-75px); 
   border-radius: 8px !important;
+  background-color: black;
   outline: 8px solid white !important;
   justify-self: center;
   display: block;
@@ -432,3 +432,6 @@ salla-add-product-button {
   align-items: center; 
   text-align: center;  
 }
+body {
+  background-color: white !important;
+} 
