@@ -576,11 +576,11 @@ select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/
 .h-80{height:20rem}
 .h-\[300px\]{height:300px}
 .h-\[34px\]{height:34px}
-.h-auto{height:auto}
 .h-banner{height:200px}
 .h-full{height:100%}
 .h-lg-banner{height:428px}
 .h-px{height:1px}
+.h-auto{height:auto}
 .max-h-0{max-height:0px}
 .max-h-8{max-height:2rem}
 .max-h-\[300px\]{max-height:300px}
@@ -6404,8 +6404,8 @@ lite-youtube.lyt-activated > .lty-playbtn {
 .sm\:block{display:block}
 .sm\:inline-flex{display:inline-flex}
 .sm\:grid{display:grid}
-.sm\:h-auto{height:auto}
 .sm\:h-full{height:100%}
+.sm\:h-auto{height:auto}
 .sm\:\!w-\[220px\]{width:220px !important}
 .sm\:grow-0{flex-grow:0}
 .sm\:translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x), 0px) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
@@ -6419,9 +6419,9 @@ lite-youtube.lyt-activated > .lty-playbtn {
 .sm\:p-1{padding:0.25rem}
 .sm\:py-16{padding-top:4rem;padding-bottom:4rem}
 .sm\:pb-0{padding-bottom:0px}
+.sm\:pt-20{padding-top:5rem}
 .sm\:pb-20{padding-bottom:5rem}
-.sm\:pt-12{padding-top:3rem}
-.sm\:pt-20{padding-top:5rem}}
+.sm\:pt-12{padding-top:3rem}}
 @media (min-width: 768px){
 .md\:sticky{position:sticky}
 .md\:-mb-2{margin-bottom:-0.5rem}
@@ -6449,8 +6449,8 @@ lite-youtube.lyt-activated > .lty-playbtn {
 .md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}
 .md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}
 .md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}
-.md\:grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}
 .md\:grid-cols-\[repeat\(3\2c minmax\(0\2c 1fr\)\)\]{grid-template-columns:repeat(3,minmax(0,1fr))}
+.md\:grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}
 .md\:flex-row{flex-direction:row}
 .md\:items-start{align-items:flex-start}
 .md\:items-center{align-items:center}
