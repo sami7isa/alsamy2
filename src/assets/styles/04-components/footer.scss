@@ -70,7 +70,7 @@
   border-bottom-color: rgba(0, 0, 0, 0.1) !important;
 }
 @media (max-width: 768px) { 
-  .logo-footer {
-    transform: translateX(-100px);     
+  .store-footer .navbar-brand img {
+    margin-left: -100px !important;
   }
 }

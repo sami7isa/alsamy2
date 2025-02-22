@@ -3,7 +3,6 @@ class ProductCard extends HTMLElement {
   constructor(){
     super()
   }
-  
   connectedCallback(){
     // Parse product data
     this.product = this.product || JSON.parse(this.getAttribute('product')); 
@@ -152,7 +151,7 @@ class ProductCard extends HTMLElement {
      *  Show quantity.
      */
     this.showQuantity = this.hasAttribute('showQuantity');
-  }
+  } 
 
   render(){
     this.classList.add('s-product-card-entry'); 
