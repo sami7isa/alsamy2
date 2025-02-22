@@ -7,7 +7,7 @@
   }
 
   &__inner{
-    @apply bg-dark py-8 lg:py-16 border-b border-dashed border-b-white/10;
+    @apply bg-white py-8 lg:py-16 border-b border-dashed border-b-white/10;
   }  
 
   h3{
@@ -49,4 +49,28 @@
 }
 .icon-social {
   color: gray !important;   
+}
+.store-footer {
+  background-color: white !important; 
+  color: black !important;
+}
+
+.store-footer__inner {
+  background-color: white !important;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1) !important;
+}
+
+.footer-is-light .store-footer {
+  background-color: white !important;
+  color: black !important;
+}
+
+.footer-is-light .store-footer__inner {
+  background-color: white !important;
+  border-bottom-color: rgba(0, 0, 0, 0.1) !important;
+}
+@media (max-width: 768px) { 
+  .logo-footer {
+    transform: translateX(-100px);     
+  }
 }

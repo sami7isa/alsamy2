@@ -412,7 +412,7 @@ salla-add-product-button {
   transform: translateY(-75px); 
   border-radius: 8px !important;
   background-color: black;
-  outline: 8px solid white !important;
+  outline: 5px solid white !important;
   justify-self: center;
   display: block;
   margin: 0 auto;
@@ -432,6 +432,16 @@ salla-add-product-button {
   align-items: center; 
   text-align: center;  
 }
+
+@media (max-width: 768px) { 
+  .s-slider-block__title .s-slider-block__title-right h2 {
+    transform: translateX(-40px);     
+  }
+}
+
+
+
 body {
   background-color: white !important;
 } 
+ 
